@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf8" />
+
+		<title>Samba 7 Go - Cartola</title>
+		<style type="text/css">
+			@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+			@import "https://henrique7cordas.github.io/songbooks/css/songbook.css";
+			@import "https://henrique7cordas.github.io/songbooks/css/songbook.window.css";
+			@import "https://henrique7cordas.github.io/songbooks/css/songbook.home.css";
+			@import "https://henrique7cordas.github.io/songbooks.samba7vol3/css/vol3.css";
+		</style>
+		<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+		<script type="text/javascript" src="https://henrique7cordas.github.io/songbooks/js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="https://henrique7cordas.github.io/songbooks/js/jquery.scrollto.min.js"></script>
+		<script type="text/javascript" src="https://henrique7cordas.github.io/songbooks/js/jquery.hotkeys.js"></script>
+		<script type="text/javascript" src="https://drive.google.com/uc?export=view&id=1WuXik5EUQiudzpkOO_BvSXcSCu-MSPd8"></script>
+		<script type="text/javascript" src="https://henrique7cordas.github.io/songbooks/js/h7.utils-0.1.min.js"></script>
+		<script type="text/javascript" src="https://henrique7cordas.github.io/songbooks/js/h7.songbook-0.1.min.js"></script>
+		<script type="text/javascript" src="https://henrique7cordas.github.io/songbooks/js/songbook.home.js"></script>
+		<script>if (window.module) module = window.module;</script>
+		<script type="text/javascript">
+			if(window.require!=undefined) {
+				window.ELECTRON = require('electron');
+				window.ELECTRON_PATH = require('path');
+			}
+
+			jQuery(window).ready(function(){
+				if(window.SONGBOOK_CONFIG==undefined) {
+					jQuery("div.permission-error").show();
+					jQuery("body").addClass("complete");
+					window.songbook={getParameterByName:function(){return "";}}
+					SongBookWindowControls.build();
+				} else {
+					window.songbook = new SongBook(window.SONGBOOK_CONFIG);
+					SongBookWindowControls.build();
+					jQuery("body").addClass("complete");
+					SongBookHome.populateSongBookInfo();
+				}
+			});
+		</script>
+	</head>
+	<body class="home">
+		<div class="login-dialog"><span>Efetue o login na sua conta google para continuar:</span></div>
+		<div class="window-title-bar">
+			<div class="draggable-area">
+				<div class="title-label">
+					<span class="title">Samba 7 Vol.3</span>
+					<span class="account-select">Entrar com outra conta</span>
+				</div>
+				<div class="control-buttons">
+					<a href="#" class="button minimize"></a>
+					<a href="#" class="button max-res maximize"></a>
+					<a href="#" class="button close"></a>
+				</div>
+			</div>
+		</div>
+		<div class="permission-error">
+			<span>Erro: Você não possui permissões para acessar este songbook. (Erro 0x001)</span>
+		</div>
+
+		<div class="samba7-home-header">
+			<img src="https://henrique7cordas.github.io/songbooks/images/samba7.go.logo.png" />
+		</div>
+
+		<div class="samba7-book-description">
+			<div class="book-container">
+				<div class="smb7-middle-center">
+					<div class="book-contents smb7-songbook" name="">
+
+						<div class="book-logo">
+							<img src="https://henrique7cordas.github.io/songbooks.samba7vol3/images/logo-caderno.png" title="" />
+						</div>
+						<div class="book-musics">
+
+							<ul class="smb7-music-list">
+								<li class="smb7-music">
+									<div class="smb7-music-number"></div>
+									<div class="smb7-music-info">
+										<em class="m-name"></em>
+										<em class="m-composer"></em>
+									</div>
+									<div class="smb7-music-buttons">
+										<!-- <a class="music-button spotify" href="#" title="Ouvir gratuitamente no Spotify"></a> -->
+										<a class="music-button play" href="" title="Iniciar Songbook com a música selecionada"></a>
+									</div>
+								</li>
+							</ul>
+
+						</div>
+
+						<div class="songbook-play-button">
+							<a class="play" href="https://henrique7cordas.github.io/songbooks.samba7vol3/songbook.html">
+								<span class="symbol"></span>
+								<span class="text">PLAY</span>
+							</a>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="book-footer">
+			Este songbook faz parte do meu acervo de estudos, conheça mais em
+			<a target="_new" href="http://www.henriquesetecordas.com.br/acervo/">
+				www.heniquesetecordas.com.br/acervo
+			</a>
+		</div>
+	</body>
+</html>

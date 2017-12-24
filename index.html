@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf8" />
+
+		<title>Samba 7 Go - Cartola</title>
+		<style type="text/css">
+			@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+			@import "https://henrique7cordas.github.io/songbooks/css/loaders.css";
+			@import "https://henrique7cordas.github.io/songbooks/css/songbook.css";
+			@import "https://henrique7cordas.github.io/songbooks/css/songbook.window.css";
+			@import "https://henrique7cordas.github.io/songbooks/css/splash.css";
+			@import "https://henrique7cordas.github.io/songbooks.samba7vol3/css/vol3.css";
+		</style>
+		<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+		<script type="text/javascript" src="https://henrique7cordas.github.io/songbooks/js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="https://henrique7cordas.github.io/songbooks/js/jquery.scrollto.min.js"></script>
+		<script type="text/javascript" src="https://henrique7cordas.github.io/songbooks/js/h7.utils-0.1.min.js"></script>
+		<script type="text/javascript" src="https://henrique7cordas.github.io/songbooks/js/h7.songbook-0.1.min.js"></script>
+		<script type="text/javascript" src="https://henrique7cordas.github.io/songbooks/js/songbook.splash.js"></script>
+		<script>if (window.module) module = window.module;</script>
+		<script type="text/javascript">
+			if(window.require!=undefined) {
+				window.ELECTRON = require('electron');
+				window.ELECTRON_PATH = require('path');
+			}
+
+			jQuery(window).ready(function(){
+				SongBookWindowControls.build();
+				jQuery("body").addClass("complete");
+			});
+		</script>
+	</head>
+	<body class="home">
+		<div class="window-title-bar">
+			<div class="draggable-area">
+				<div class="title-label">
+					<span class="title">Samba 7 Vol.3</span>
+					<span class="account-select">Entrar com outra conta</span>
+				</div>
+				<div class="control-buttons">
+					<a href="#" class="button minimize"></a>
+					<a href="#" class="button max-res maximize"></a>
+					<a href="#" class="button close"></a>
+				</div>
+			</div>
+		</div>
+		<div class="permission-error">
+			<span>Erro: Você não possui permissões para acessar este songbook. (Erro 0x001)</span>
+		</div>
+		<div class="samba7go-logo">
+		</div>
+		<div class="loaders">
+			<div class="center">
+				<div class="loader-cont">
+					<div class="loader">
+						<div class="loader-inner ball-beat">
+							<div></div>
+							<div></div>
+							<div></div>
+						</div>
+					</div>
+				</div>
+				<div class="loader-cont">
+					<div class="loader">
+						<div class="loader-inner ball-beat">
+							<div></div>
+							<div></div>
+							<div></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

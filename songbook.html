@@ -1,0 +1,280 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf8" />
+
+		<title>Samba 7 Go - Cartola</title>
+		<style type="text/css">
+			@import "https://henrique7cordas.github.io/songbooks/css/songbook.css";
+			@import "https://henrique7cordas.github.io/songbooks/css/songbook.window.css";
+			@import "https://henrique7cordas.github.io/songbooks/css/songbook.interface.css";
+			@import "https://henrique7cordas.github.io/songbooks.samba7vol3/css/vol3.css";
+		</style>
+		<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+		<script type="text/javascript" src="https://henrique7cordas.github.io/songbooks/js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="https://henrique7cordas.github.io/songbooks/js/jquery.scrollto.min.js"></script>
+		<script type="text/javascript" src="https://henrique7cordas.github.io/songbooks/js/jquery.hotkeys.js"></script>
+		<script type="text/javascript" src="https://drive.google.com/uc?export=view&id=1WuXik5EUQiudzpkOO_BvSXcSCu-MSPd8"></script>
+		<script type="text/javascript" src="https://henrique7cordas.github.io/songbooks/js/h7.utils-0.1.min.js"></script>
+		<script type="text/javascript" src="https://henrique7cordas.github.io/songbooks/js/h7.songbook-0.1.min.js"></script>
+		<script>if (window.module) module = window.module;</script>
+		<script type="text/javascript">
+			if(window.require!=undefined) {
+				window.ELECTRON = require('electron');
+			}
+
+			function onYouTubeIframeAPIReady() {
+
+				jQuery(window).ready(function(){
+					if(window.SONGBOOK_CONFIG==undefined) {
+						jQuery("div.permission-error").show();
+						jQuery("body").addClass("complete");
+						window.songbook={getParameterByName:function(){return "";}}
+						SongBookWindowControls.build();
+					} else {
+						window.songbook = new SongBook(window.SONGBOOK_CONFIG);
+						window.songbook.createPlayer("yt-player");
+						SongBookWindowControls.build();
+						jQuery("body").addClass("complete");
+					}
+				});
+
+			};
+		</script>
+		<script src="https://www.youtube.com/iframe_api"></script>
+	</head>
+	<body>
+		<div class="window-title-bar">
+			<div class="draggable-area">
+				<div class="title-label">
+					<span class="title">Samba 7 Vol.3</span>
+					<span class="account-select">Entrar com outra conta</span>
+				</div>
+				<div class="control-buttons">
+					<a href="#" class="button minimize"></a>
+					<a href="#" class="button max-res maximize"></a>
+					<a href="#" class="button close"></a>
+				</div>
+			</div>
+		</div>
+		<div class="permission-error">
+			<span>Erro: Você não possui permissões para acessar este songbook. (Erro 0x001)</span>
+		</div>
+		<div class="book-contents smb7-songbook">
+			<div class="samba7-header">
+				<div class="smb7-menu-placeholder" title="Abrir Menu">
+					<a class="smb7-menu-button" href="#">
+						<img src="https://henrique7cordas.github.io/songbooks/images/songbook-menu-button.png" />
+					</a>
+					<div class="logo">
+						<a class="smb7-home-button" title="Voltar para o Início" href="#">
+							<img src="https://henrique7cordas.github.io/songbooks/images/samba7.go.logo.small.png" />
+						</a>
+					</div>
+				</div>
+				<div class="smb7-music-name">
+					<h1></h1>
+				</div>
+				<div class="smb7-music-panel">
+					<div class="smb7-music-parts">
+						<ul class="songbook-music-part-list">
+							<li></li>
+						</ul>
+					</div>
+					<div class="smb7-control-buttons">
+						<a href="#" class="button repeat" title="Repetir Partes"></a>
+						<a href="#" class="button play" title="Tocar/Pausar Música"></a>
+						<a href="#" class="button stop" title="Parar Música"></a>
+					</div>
+				</div>
+			</div>
+			<div class="samba7-menu">
+				<div class="book-musics">
+					<ul class="smb7-music-list">
+						<li class="smb7-music">
+							<div class="smb7-music-number"></div>
+							<div class="smb7-music-info">
+								<em class="m-name"></em>
+								<em class="m-composer"></em>
+							</div>
+							<div class="smb7-music-buttons">
+								<!-- <a class="music-button spotify" href="#" title="Ouvir gratuitamente no Spotify"></a> -->
+								<a class="music-button play" href="" title="Iniciar Songbook com a música selecionada"></a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="samba7-player">
+				<div class="player-container">
+
+					<div class="smb7-middle-center">
+
+						<div class="smb7-songbook-player fullhd no-sheet">
+							<div class="sheet-preloader">
+								<div class="md-center">
+									<div class="prld-label">Carregando música...</div>
+									<div class="progress-bar"><span class="percentage"></span></div>
+								</div>
+							</div>
+							<div class="youtube-player">
+								<div class="youtube-frame" id="yt-player"></div>
+							</div>
+							<div class="player-controls">
+								<div class="speed-ctrls">
+									<ul class="smb7-speed-ctrls">
+										<li class="smb7-player-button" type="speed" title="Tocar a parte selecionada na velocidade normal (vídeo)" value="normal" startSelected="true">
+											<span class="spd-type">Vídeo</span>
+											<span class="spd-display">Normal</span>
+										</li>
+										<li class="smb7-player-button" type="speed" title="Tocar a parte selecionada na velocidade lenta (vídeo)" value="slow">
+											<span class="spd-type">Vídeo</span>
+											<span class="spd-display">Lento</span>
+										</li>
+										<li class="smb7-player-button" type="speed" title="Velocidade de reprodução 100%" value="1" startSelected="true">
+											<span class="spd-type">Velocidade</span>
+											<span class="spd-display">100%</span>
+										</li>
+										<li class="smb7-player-button" type="speed" title="Velocidade de reprodução 75%" value="0.75">
+											<span class="spd-type">Velocidade</span>
+											<span class="spd-display">75%</span>
+										</li>
+										<li class="smb7-player-button" type="speed" title="Velocidade de reprodução 50%" value="0.5">
+											<span class="spd-type">Velocidade</span>
+											<span class="spd-display">50%</span>
+										</li>
+										<li class="smb7-player-button" type="speed" title="Velocidade de reprodução 25%" value="0.25">
+											<span class="spd-type">Velocidade</span>
+											<span class="spd-display">25%</span>
+										</li>
+									</ul>
+								</div>
+								<div class="sheet-ctrls">
+									<ul class="smb7-sheet-ctrls">
+										<li class="smb7-player-button image" type="sheet" value="zoom" startSelected="true">
+											<img src="https://henrique7cordas.github.io/songbooks/images/zoom-icon.png" title="Ampliar partitura ao passar o mouse"/>
+										</li>
+										<li class="smb7-player-button image" type="sheet" value="notes">
+											<img src="https://henrique7cordas.github.io/songbooks/images/eye-icon.png" title="Ativar o modo 'Leitura Fácil'"/>
+										</li>
+										<li class="smb7-player-button" type="sheet" value="parts" startSelected="true">
+											<span class="spd-display">Partitura</span>
+										</li>
+										<li class="smb7-player-button" type="sheet" value="tabs">
+											<span class="spd-display">Tablatura</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="player-sheets">
+								<div class="zoom-controller">
+									<div class="zoom-placehold">
+										<div class="zoom-placehold-delimiter">
+											<div class="zoom-container"></div>
+										</div>
+									</div>
+								</div>
+								<img class="display-image" src="" />
+							</div>
+
+							<div class="sheet-reviewer">
+								<div class="rvw-view part-view" name="parts">
+									<div class="view-label">PARTITURA</div>
+									<div class="not-found-message">Arquivo Não Encontrado: ...<em class="path"></em></div>
+									<img class="display-image" src="" />
+								</div>
+
+								<div class="rvw-view partnote-view" name="partnotes">
+									<div class="view-label">PARTITURA (Com nome das Notas)</div>
+									<div class="not-found-message">Arquivo Não Encontrado: ...<em class="path"></em></div>
+									<img class="display-image" src="" />
+								</div>
+
+								<div class="rvw-view tab-view" name="tabs">
+									<div class="view-label">TABLATURAS</div>
+									<div class="not-found-message">Arquivo Não Encontrado: ...<em class="path"></em></div>
+									<img class="display-image" src="" />
+								</div>
+
+								<div class="rvw-controls">
+									<div class="ctrs-label">Compassos:</div>
+									<div class="ctrs-numbers">
+										<ul class="cmp-numbers">
+											<li class="cmp-num" name="1">1</li>
+											<li class="cmp-num" name="2">2</li>
+											<li class="cmp-num" name="3">3</li>
+											<li class="cmp-num" name="4">4</li>
+											<li class="cmp-num" name="5">5</li>
+											<li class="cmp-num" name="6">6</li>
+											<li class="cmp-num" name="7">7</li>
+											<li class="cmp-num" name="8">8</li>
+											<li class="cmp-num" name="9">9</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="smb7-debugger-container">
+							<a class="review-button" href="#" title="Revisar partituras (Ligar/desligar)"></a>
+							<a class="edit-button" href="#" title="Sincronizar tempos da partitura (Ligar/desligar)"></a>
+							<ul class="smb7-debugger">
+								<li class="speed-type initial-tree" value="">
+									<span class="label speed-type-label">"<em class="speed"><span class="unset"></span></em>": <em class="bracket">{</em></span>
+									<ul class="music-parts">
+										<li class="music-part initial-tree">
+											<span class="part-times">/* S: <em class="part-start"></em> | E: <em class="part-end"></em> */</span>
+											<span class="label music-part-label"><em class="value number"><span class="unset"></span></em>: <em class="bracket">{</em></span>
+											<ul class="music-bars">
+												<li class="music-bar initial-tree"><em class="number"><span class="unset"></span></em>: <span class="times">[<em class="start"><span class="unset">0</span></em>, <em class="end"><span class="unset">0</span></em><em class="line-bars">,<span class="bar-num"></span></em>]</span><em class="comma">,</em></li>
+											</ul>
+											<span class="end music-part-end"><em class="bracket">}</em><em class="comma">,</em></span>
+										</li>
+									</ul>
+									<span class="end speed-type-end"><em class="bracket">}</em><em class="comma">,</em></span>
+								</li>
+							</ul>
+							<ul class="smb7-music-parts">
+								<li class="part-contents">
+									<span class="parts-label">parts: <em class="bracket">{</em></span>
+									<ul class="parts-list">
+										<li class="part initial-tree" partNumber="">
+											<em class="number"><span class="unset"></span></em>: <em class="bracket">{</em>display: <em class="prop">"</em><em class="display prop"><span class="unset"></span></em><em class="prop">"</em>,
+											timeToSeek: <em class="bracket">{</em> normal: <em class="bracket">{</em>start: <em class="ns prop"><span class="unset"></span></em>, end:
+											<em class="ne prop"><span class="unset"></span></em><em class="bracket">}</em> , slow: <em class="bracket">{</em>start:
+											<em class="ss prop"><span class="unset"></span></em>, end: <em class="se prop"><span class="unset"></span></em><em class="bracket">} }}</em><em class="comma">,</em>
+										</li>
+									</ul>
+									<span class="end part-end"><em class="bracket">}</em></span><em class="comma">,</em>
+								</li>
+							</ul>
+
+							<div class="sheet-limits">
+								<div class="sheet-start">
+									<span class="label">sheetStart: <em class="number sheet-start-time"></em></span>,
+								</div>
+								<div class="sheet-start">
+									<span class="label">sheetEnd: <em class="number sheet-end-time"></em></span>
+								</div>
+							</div>
+						</div>
+						<div class="smb7-debugger-messages">
+							<div class="modal-dialog">
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+
+			<div class="book-footer">
+				Este songbook faz parte do meu acervo de estudos, conheça mais em
+				<a target="new" href="http://www.henriquesetecordas.com.br/acervo/">
+					www.heniquesetecordas.com.br/acervo
+				</a>
+			</div>
+		</div>
+	</body>
+</html>
